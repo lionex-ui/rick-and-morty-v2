@@ -1,0 +1,71 @@
+{
+  "info": {
+    "count": 4,
+    "pages": 1,
+    "next": null,
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 21,
+      "name": "Testicle Monster Dimension",
+      "type": "Dimension",
+      "dimension": "Testicle Monster Dimension",
+      "residents": [
+        "https://rickandmortyapi.com/api/character/7",
+        "https://rickandmortyapi.com/api/character/436"
+      ],
+      "url": "https://rickandmortyapi.com/api/location/21",
+      "created": "2017-11-18T19:41:01.605Z"
+    },
+    {
+      "id": 103,
+      "name": "Merged Universe",
+      "type": "Dimension",
+      "dimension": "Merged Dimension",
+      "residents": [
+        "https://rickandmortyapi.com/api/character/652",
+        "https://rickandmortyapi.com/api/character/656",
+        "https://rickandmortyapi.com/api/character/657",
+        "https://rickandmortyapi.com/api/character/658",
+        "https://rickandmortyapi.com/api/character/661",
+        "https://rickandmortyapi.com/api/character/655"
+      ],
+      "url": "https://rickandmortyapi.com/api/location/103",
+      "created": "2020-08-13T10:16:18.946Z"
+    },
+    {
+      "id": 110,
+      "name": "Narnia Dimension",
+      "type": "Dimension",
+      "dimension": "Fantasy Dimension",
+      "residents": [
+        "https://rickandmortyapi.com/api/character/673",
+        "https://rickandmortyapi.com/api/character/674",
+        "https://rickandmortyapi.com/api/character/675",
+        "https://rickandmortyapi.com/api/character/676",
+        "https://rickandmortyapi.com/api/character/677",
+        "https://rickandmortyapi.com/api/character/678",
+        "https://rickandmortyapi.com/api/character/679",
+        "https://rickandmortyapi.com/api/character/681",
+        "https://rickandmortyapi.com/api/character/682",
+        "https://rickandmortyapi.com/api/character/683",
+        "https://rickandmortyapi.com/api/character/685"
+      ],
+      "url": "https://rickandmortyapi.com/api/location/110",
+      "created": "2021-10-16T11:59:26.649Z"
+    },
+    {
+      "id": 123,
+      "name": "Normal Size Bug Dimension",
+      "type": "Dimension",
+      "dimension": "",
+      "residents": [
+        "https://rickandmortyapi.com/api/character/795",
+        "https://rickandmortyapi.com/api/character/796"
+      ],
+      "url": "https://rickandmortyapi.com/api/location/123",
+      "created": "2021-11-02T13:03:21.307Z"
+    }
+  ]
+}
