@@ -14,7 +14,7 @@ async def rick_and_morty_client() -> AsyncGenerator[RickAndMortyService, Any]:
     Correct opening/closing of HTTP clients, etc.
     """
     async with AsyncClient(
-        base_url="https://rickandmortyapi.com/api",
+        base_url='https://rickandmortyapi.com/api',
         timeout=10,
         limits=Limits(
             max_connections=1,
@@ -22,6 +22,4 @@ async def rick_and_morty_client() -> AsyncGenerator[RickAndMortyService, Any]:
         ),
         http2=True,
     ) as http_client:
-        yield RickAndMortyService(
-            RickAndMortyHttpClient(http_client)
-        )
+        yield RickAndMortyService(RickAndMortyHttpClient(http_client))

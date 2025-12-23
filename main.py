@@ -11,7 +11,7 @@ def _save_json(filename: str, data) -> None:
     OUTPUT_DIR.mkdir(exist_ok=True)
     path = OUTPUT_DIR / filename
 
-    with path.open("w", encoding="utf-8") as f:
+    with path.open('w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
@@ -19,11 +19,8 @@ async def _test_all(client: RickAndMortyService, resource: ResourceType, filters
     one_page_resource = await client.get_all(resource=resource)
     _save_json(f'one_page_{resource}.json', one_page_resource)
 
-    total_pages = one_page_resource["info"]["pages"]
-    many_pages_resource_tasks = [
-        client.get_all(resource=resource, page=i)
-        for i in range(1, total_pages + 1)
-    ]
+    total_pages = one_page_resource['info']['pages']
+    many_pages_resource_tasks = [client.get_all(resource=resource, page=i) for i in range(1, total_pages + 1)]
     many_pages_resource = await asyncio.gather(*many_pages_resource_tasks)
     _save_json(f'many_pages_{resource}.json', many_pages_resource)
 
@@ -47,11 +44,9 @@ async def main() -> None:
             _test_all(client, ResourceType.CHARACTER, {'status': 'alive'}),
             _test_all(client, ResourceType.LOCATION, {'type': 'Dimension'}),
             _test_all(client, ResourceType.EPISODE, {'name': 'Pilot'}),
-
             _test_single(client, ResourceType.CHARACTER, 1),
             _test_single(client, ResourceType.LOCATION, 1),
             _test_single(client, ResourceType.EPISODE, 1),
-
             _test_multiple(client, ResourceType.CHARACTER, [1, 2, 3]),
             _test_multiple(client, ResourceType.LOCATION, [1, 2, 3]),
             _test_multiple(client, ResourceType.EPISODE, [1, 2, 3]),
@@ -60,6 +55,6 @@ async def main() -> None:
         await asyncio.gather(*tasks)
 
 
-if __name__ == "__main__":
-    OUTPUT_DIR = Path("output")
+if __name__ == '__main__':
+    OUTPUT_DIR = Path('output')
     asyncio.run(main())

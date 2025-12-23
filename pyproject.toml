@@ -8,10 +8,39 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "httpx[http2] (>=0.28.1,<0.29.0)"
+    "httpx[http2] (>=0.28.1,<0.29.0)",
+    "ruff (>=0.14.10,<0.15.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+exclude = [".venv"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "T20",
+]
+pydocstyle.convention = 'google'
+
+[tool.ruff.lint.isort]
+known-local-folder = ["app"]
+split-on-trailing-comma = true
+combine-as-imports = true
+case-sensitive = false
+detect-same-package = true
+order-by-type = false
+force-sort-within-sections = true
